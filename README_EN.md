@@ -8,7 +8,7 @@
 </p>
 <p align="center">
     <a href="https://github.com/ymcui/LERT/blob/main/LICENSE">
-        <img alt="GitHub" src="https://img.shields.io/github/license/ymcui/LERT.svg?color=blue&style=flat-square">
+        <img alt="GitHub" src="https://img.shields.io/github/license/iflytek/MiniRBT.svg?color=blue&style=flat-square">
     </a>
 </p>
 

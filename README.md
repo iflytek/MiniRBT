@@ -7,9 +7,10 @@
 </p>
 <p align="center">
     <a href="https://github.com/ymcui/LERT/blob/main/LICENSE">
-        <img alt="GitHub" src="https://img.shields.io/github/license/ymcui/LERT.svg?color=blue&style=flat-square">
+        <img alt="GitHub" src="https://img.shields.io/github/license/iflytek/MiniRBT.svg?color=blue&style=flat-square">
     </a>
 </p>
+
 
 在自然语言处理领域中，预训练语言模型（Pre-trained Language Models）已成为非常重要的基础技术。为了进一步促进中文信息处理的研究发展，哈工大讯飞联合实验室（HFL）基于自主研发的[知识蒸馏工具TextBrewer](https://github.com/airaria/TextBrewer)，结合了全词掩码（Whole Word Masking）技术和知识蒸馏（Knowledge Distillation）技术推出中文小型预训练模型**MiniRBT**。
 
