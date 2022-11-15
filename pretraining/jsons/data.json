@@ -1,0 +1,15 @@
+{"train":
+    {"train_files":
+        ["./dataset/train/train_files/a.txt",
+         "./dataset/train/train_files/b.txt"],
+    "train_ref_files":
+        ["./dataset/train/ref_files/a_ref.txt",
+         "./dataset/train/ref_files/b_ref.txt"]
+    },  
+ "dev":
+    {"dev_files":
+        [],
+    "dev_ref_files":
+        []
+    }
+}
