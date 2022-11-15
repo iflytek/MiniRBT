@@ -40,7 +40,7 @@
 
 目前预训练模型存在参数量大，推理时间长，部署难度大的问题，为了减少模型参数及存储空间，加快推理速度，我们推出了实用性强、适用面广的中文小型预训练模型**MiniRBT**，我们采用了如下技术：
 
-* **Whole Word Masking (wwm)**：全词掩码技术是预训练阶段的训练样本生成策略。简单来说，原有基于WordPiece的分词方式会把一个完整的词切分成若干个子词，在生成训练样本时，这些被分开的子词会随机被mask（替换成[MASK]；保持原词汇；随机替换成另外一个词）。而在WWM中，如果一个完整的词的部分WordPiece子词被mask，则同属该词的其他部分也会被mask。更详细的说明及样例请参考：**[Chinese-BERT-wwm](https://github.com/ymcui/Chinese-BERT-wwm)**，本工作中我们使用[哈工大LTP](http://ltp.ai)作为分词工具。
+* **全词掩码技术**：全词掩码技术（Whole Word Masking）是预训练阶段的训练样本生成策略。简单来说，原有基于WordPiece的分词方式会把一个完整的词切分成若干个子词，在生成训练样本时，这些被分开的子词会随机被mask（替换成[MASK]；保持原词汇；随机替换成另外一个词）。而在WWM中，如果一个完整的词的部分WordPiece子词被mask，则同属该词的其他部分也会被mask。更详细的说明及样例请参考：**[Chinese-BERT-wwm](https://github.com/ymcui/Chinese-BERT-wwm)**，本工作中我们使用[哈工大LTP](http://ltp.ai)作为分词工具。
 
 * **两段式蒸馏**：相较于教师模型直接蒸馏到学生模型的传统方法，我们采用中间模型辅助教师模型到学生模型蒸馏的两段式蒸馏方法，即教师模型先蒸馏到助教模型（Teacher Assistant），学生模型通过对助教模型蒸馏得到，以此提升学生模型在下游任务的表现。并在下文中贴出了下游任务上两段式蒸馏与一段式蒸馏的实验对比，结果表明两段式蒸馏能取得相比一段式蒸馏更优的效果。
 
@@ -127,7 +127,7 @@ model = BertModel.from_pretrained("MODEL_NAME")
 * [**TNEWS**：文本分类](https://storage.googleapis.com/cluebenchmark/tasks/tnews_public.zip)
 * [**ChnSentiCorp**: 情感分析](https://huggingface.co/datasets/seamew/ChnSentiCorp/tree/main)
 
-经过学习率搜索，我们验证了小参数量模型需要更高的学习率和更多的迭代次数，以下是各数据集的学习率
+经过学习率搜索，我们验证了小参数量模型需要更高的学习率和更多的迭代次数，以下是各数据集的学习率。
 
 **最佳学习率:**
 
@@ -138,9 +138,7 @@ model = BertModel.from_pretrained("MODEL_NAME")
 
 *代表所有小型预训练模型 (RBT3, RBT4-H312, MiniRBT-H256, MiniRBT-H288)
 
-**注意：为了保证结果的可靠性，对于同一模型，我们设置epoch分别为2、3、5、10，运行至少3遍（不同随机种子），汇报模型性能平均值的最大值。不出意外，你运行的结果应该很大概率围绕该平均值上下浮动。以下所有实验结果均是在开发集上的实验结果。**
-
-**实验结果：**
+**实验结果（开发集）：**
 
 | Task               | CMRC 2018  | DRCD        | OCNLI  | LCQMC | BQ Corpus | TNEWS | ChnSentiCorp |
 | :-------           | :---------:| :---------: | :-----:| :---: | :------:  | :---: | :---------:  |
@@ -161,6 +159,10 @@ model = BertModel.from_pretrained("MODEL_NAME")
 | **RBT4-H312**       | 89.2%/80.8% | 89.1%/84%   | 89.4% | 96%   |    97.3%  | 93.9% |     98.3%    |
 | **MiniRBT-H256** | 89.9%/82.8% | 92%/87.9%   | 89.7% | 97.5% |    97.6%  | 94.4% |     98%      |
 | **MiniRBT-H288** | 92.2%/86.5% | 92.3%/88.1% | 89.2% | 97%   |    97.7%  | 94.7% |     97.8%    |
+
+```
+注意：为了保证结果的可靠性，对于同一模型，训练轮数分别设置为2、3、5、10，每组至少训练3遍（不同随机种子），汇报模型性能最大平均值。
+```
 
 <h2 id="two-stage">两段式蒸馏对比<sup>†</sup></h2>
 
@@ -199,21 +201,21 @@ model = BertModel.from_pretrained("MODEL_NAME")
 
 ### 环境准备
 
-预训练代码所需依赖库仅在python3.8，PyTorch v1.8.1下测试过，一些特定依赖库可通过`pip install -r requirements.txt`命令安装
+预训练代码所需依赖库仅在python3.8，PyTorch v1.8.1下测试过，一些特定依赖库可通过`pip install -r requirements.txt`命令安装。
 
 #### 预训练模型准备
 
-可从[huggingface官网](https://huggingface.co/models)下载`ltp`分词模型权重与`RoBERTa-wwm-ext`预训练模型权重，并存放至`${project-dir}/pretrained_model_path/`目录下相应文件夹
+可从[huggingface官网](https://huggingface.co/models)下载`ltp`分词模型权重与`RoBERTa-wwm-ext`预训练模型权重，并存放至`${project-dir}/pretrained_model_path/`目录下相应文件夹。
 
 #### 数据准备
 
-对于中文模型，我们需先生成含有分词信息的参考文件，可直接运行以下命令
+对于中文模型，我们需先生成含有分词信息的参考文件，可直接运行以下命令：
 
 ```sh
 python run_chinese_ref.py
 ```
 
-因为预训练数据集较大，推荐生成参考文件后进行预处理，仅需运行以下命令
+因为预训练数据集较大，推荐生成参考文件后进行预处理，仅需运行以下命令：
 
 ```sh
 python my_datasets.py
@@ -221,7 +223,7 @@ python my_datasets.py
 
 #### 运行训练脚本
 
-一旦你对数据做了预处理，进行预训练蒸馏就非常简单。我们在`distill.sh`中提供了预训练示例脚本。 该脚本支持单机多卡训练，主要包含如下参数:
+一旦你对数据做了预处理，进行预训练蒸馏就非常简单。我们在`distill.sh`中提供了预训练示例脚本。该脚本支持单机多卡训练，主要包含如下参数:
 
 * `teacher_name or_path`：教师模型权重文件
 * `student_config`: 学生模型结构配置文件
@@ -237,13 +239,13 @@ python my_datasets.py
 * `temperature`：蒸馏温度
 * `fp16`：开启半精度浮点数训练
 
-直接运行以下命令可实现MiniRBT-H256的预训练蒸馏
+直接运行以下命令可实现MiniRBT-H256的预训练蒸馏：
 
 ```bash
 sh distill.sh
 ```
 
-**提示**：以良好的模型权重初始化有助于蒸馏预训练。在我们的实验中，我们通过教师模型的6层初始化我们的助教模型RBT6(KD) ! 请参考`scripts/init_checkpoint_TA.py`来创建有效的初始化权重，并使用`--student_pretrained_weights`参数将此初始化用于蒸馏训练!
+**提示**：以良好的模型权重初始化有助于蒸馏预训练。在我们的实验中使用教师模型的前6层初始化助教模型RBT6(KD) ! 请参考`scripts/init_checkpoint_TA.py`来创建有效的初始化权重，并使用`--student_pretrained_weights`参数将此初始化用于蒸馏训练!
 
 ## 使用建议
 
@@ -269,7 +271,7 @@ A: 部分数据集提供了下载地址。未标注下载地址的数据集请�
 
 ## 参考文献
 
-[1] [Pre-training with whole word masking for chinese bert](https://ieeexplore.ieee.org/document/9599397) (Cui et al., IEEE/ACM TASLP 2021)  
+[1] [Pre-training with Whole Word Masking for Chinese BERT](https://ieeexplore.ieee.org/document/9599397) (Cui et al., IEEE/ACM TASLP 2021)  
 [2] [TextBrewer: An Open-Source Knowledge Distillation Toolkit for Natural Language Processing](https://aclanthology.org/2020.acl-demos.2) (Yang et al., ACL 2020)  
 [3] [CLUE: A Chinese Language Understanding Evaluation Benchmark](https://aclanthology.org/2020.coling-main.419) (Xu et al., COLING 2020)  
 [4] [TinyBERT: Distilling BERT for Natural Language Understanding](https://aclanthology.org/2020.findings-emnlp.372) (Jiao et al., Findings of EMNLP 2020)
