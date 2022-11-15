@@ -1,0 +1,8 @@
+transformers==4.21.0
+numpy==1.19.5
+ltp==4.2.7
+datasets==2.4.0
+tqdm
+textbrewer
+tensorboard
+tensorboardX
