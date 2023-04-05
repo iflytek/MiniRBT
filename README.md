@@ -34,6 +34,7 @@
 | [预训练](#预训练) | 说明预训练代码的使用方法 |
 | [使用建议](#使用建议) | 提供了若干使用中文小型预训练模型的建议 |
 | [FAQ](#faq) | 常见问题答疑 |
+| [引用](#引用)             | 本项目的技术报告   |
 | [参考文献](#参考文献) | 参考文献 |
 
 ## 简介
@@ -268,6 +269,21 @@ A: 上文中所述RBT6 (KD)直接由RoBERTa-wwm-ext在预训练任务上蒸馏�
 
 **Q: 某某数据集在哪里下载？**  
 A: 部分数据集提供了下载地址。未标注下载地址的数据集请自行搜索或与原作者联系获取数据。
+
+## 引用
+
+如果本项目中的模型或者相关结论有助于您的研究，请引用以下文章：https://arxiv.org/abs/2304.00717
+
+```
+@misc{yao2023minirbt,
+      title={MiniRBT: A Two-stage Distilled Small Chinese Pre-trained Model}, 
+      author={Xin Yao and Ziqing Yang and Yiming Cui and Shijin Wang},
+      year={2023},
+      eprint={2304.00717},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```
 
 ## 参考文献
 

@@ -34,7 +34,8 @@ More resources by HFL: https://github.com/iflytek/HFL-Anthology
 | [Pre-training](#pre-training) | How to use the pre-training code |
 | [Useful Tips](#useful-tips) | Provide several useful tips for using small pretrained models |
 | [FAQ](#faq) | Frequently Asked Questions |
-| [Citation](#citation) | Citation |
+| [Citation](#Citation) | Technical report of this project|
+| [References](#references) | References |
 
 ## Introduction
 
@@ -262,8 +263,22 @@ A: The RBT6 (KD) described above is directly distilled by RoBERTa-wwm-ext on the
 
 **Q: How can I download XXXXX dataset?**  
 A: Some datasets provide download addresses. For datasets without a download address, please search by yourself or contact the original author to obtain the data.
-
+    
 ## Citation
+If you find our work or resource useful, please consider cite our work: https://arxiv.org/abs/2304.00717
+
+```
+@misc{yao2023minirbt,
+      title={MiniRBT: A Two-stage Distilled Small Chinese Pre-trained Model}, 
+      author={Xin Yao and Ziqing Yang and Yiming Cui and Shijin Wang},
+      year={2023},
+      eprint={2304.00717},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```
+
+## References
 
 [1] [Pre-training with whole word masking for chinese bert](https://ieeexplore.ieee.org/document/9599397)(Cui et al., ACM TASLP 2021)  
 [2] [TextBrewer: An Open-Source Knowledge Distillation Toolkit for Natural Language Processing](https://aclanthology.org/2020.acl-demos.2) (Yang et al., ACL 2020)   
