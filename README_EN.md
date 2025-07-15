@@ -54,11 +54,11 @@ We will provide a complete technical report in the near future, so stay tuned.
 
 ## Model download
 
-| Model Name                       | Layer | Hid-size | Att-Head | Params |                         Google Drive                         |                          Baidu Disk                          |
-| :------------------------------- | :---: | :------: | :------: | :----: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| **MiniRBT-h288**                 |   6   |   288    |    8     | 12.3M  | [[PyTorch]](https://drive.google.com/file/d/1DDSUZbWORlkpKFfjsZJnsoyh5cQKZhEA/view?usp=sharing) | [[PyTorch]](https://pan.baidu.com/s/1pIwzx0Zu62fLOSQASxTohQ?pwd=7313)<br/>（pw：7313） |
-| **MiniRBT-h256**                 |   6   |   256    |    8     | 10.4M  | [[PyTorch]](https://drive.google.com/file/d/1M5U1VzfrD82SOGinhauW1N4Xupui68xj/view?usp=sharing) | [[PyTorch]](https://pan.baidu.com/s/16ZMOoliMLsa2KqMKpwT0IA?pwd=iy53)<br/>（pw：iy53） |
-| **RBT4-h312** (same as TinyBERT) |   4   |   312    |    12    | 11.4M  | [[PyTorch]](https://drive.google.com/file/d/1NmvrWvGsJwdXVd6C1Qs48K1G6KYcXVKk/view?usp=sharing) | [[PyTorch]](https://pan.baidu.com/s/11I9ojsnGK-7eZXMkl1k7EQ?pwd=ssdw)<br/>（pw：ssdw） |
+| Model Name                       | Layer | Hid-size | Att-Head | Params |                         🤗HF                          |                          Baidu Disk                          |
+| :------------------------------- | :---: | :------: | :------: | :----: | :--------------------------------------------------: | :----------------------------------------------------------: |
+| **MiniRBT-h288**                 |   6   |   288    |    8     | 12.3M  | [[PyTorch]](https://huggingface.co/hfl/minirbt-h288) | [[PyTorch]](https://pan.baidu.com/s/1pIwzx0Zu62fLOSQASxTohQ?pwd=7313)<br/>（pw：7313） |
+| **MiniRBT-h256**                 |   6   |   256    |    8     | 10.4M  | [[PyTorch]](https://huggingface.co/hfl/minirbt-h256) | [[PyTorch]](https://pan.baidu.com/s/16ZMOoliMLsa2KqMKpwT0IA?pwd=iy53)<br/>（pw：iy53） |
+| **RBT4-h312** (same as TinyBERT) |   4   |   312    |    12    | 11.4M  |  [[PyTorch]](https://huggingface.co/hfl/rbt4-h312)   | [[PyTorch]](https://pan.baidu.com/s/11I9ojsnGK-7eZXMkl1k7EQ?pwd=ssdw)<br/>（pw：ssdw） |
 
 Alternatively, download from (PyTorch & TF2)：<https://huggingface.co/hfl>
 

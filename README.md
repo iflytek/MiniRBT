@@ -53,11 +53,11 @@
 
 ## 模型下载
 
-| 模型简称                       | 层数 | 隐层大小 | 注意力头 | 参数量 |                          Google下载                          |                          百度盘下载                          |
-| :----------------------------- | :--: | :------: | :------: | :----: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| **MiniRBT-h288**               |  6   |   288    |    8     | 12.3M  | [[PyTorch]](https://drive.google.com/file/d/1DDSUZbWORlkpKFfjsZJnsoyh5cQKZhEA/view?usp=sharing) | [[PyTorch]](https://pan.baidu.com/s/1pIwzx0Zu62fLOSQASxTohQ?pwd=7313)<br/>（密码：7313） |
-| **MiniRBT-h256**               |  6   |   256    |    8     | 10.4M  | [[PyTorch]](https://drive.google.com/file/d/1M5U1VzfrD82SOGinhauW1N4Xupui68xj/view?usp=sharing) | [[PyTorch]](https://pan.baidu.com/s/16ZMOoliMLsa2KqMKpwT0IA?pwd=iy53)<br/>（密码：iy53） |
-| **RBT4-h312** (TinyBERT同大小) |  4   |   312    |    12    | 11.4M  | [[PyTorch]](https://drive.google.com/file/d/1NmvrWvGsJwdXVd6C1Qs48K1G6KYcXVKk/view?usp=sharing) | [[PyTorch]](https://pan.baidu.com/s/11I9ojsnGK-7eZXMkl1k7EQ?pwd=ssdw)<br/>（密码：ssdw） |
+| 模型简称                       | 层数 | 隐层大小 | 注意力头 | 参数量 |                       🤗HF下载                        |                          百度盘下载                          |
+| :----------------------------- | :--: | :------: | :------: | :----: | :--------------------------------------------------: | :----------------------------------------------------------: |
+| **MiniRBT-h288**               |  6   |   288    |    8     | 12.3M  | [[PyTorch]](https://huggingface.co/hfl/minirbt-h288) | [[PyTorch]](https://pan.baidu.com/s/1pIwzx0Zu62fLOSQASxTohQ?pwd=7313)<br/>（密码：7313） |
+| **MiniRBT-h256**               |  6   |   256    |    8     | 10.4M  | [[PyTorch]](https://huggingface.co/hfl/minirbt-h256) | [[PyTorch]](https://pan.baidu.com/s/16ZMOoliMLsa2KqMKpwT0IA?pwd=iy53)<br/>（密码：iy53） |
+| **RBT4-h312** (TinyBERT同大小) |  4   |   312    |    12    | 11.4M  |  [[PyTorch]](https://huggingface.co/hfl/rbt4-h312)   | [[PyTorch]](https://pan.baidu.com/s/11I9ojsnGK-7eZXMkl1k7EQ?pwd=ssdw)<br/>（密码：ssdw） |
 
 也可以直接通过huggingface官网下载模型（PyTorch & TF2）：<https://huggingface.co/hfl>
 
